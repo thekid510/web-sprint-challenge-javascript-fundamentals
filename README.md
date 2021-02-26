@@ -28,14 +28,28 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+Both map and foreach both will call the given function on everything in the array but map creates a new array of the same size and foreach returns the same array modified.
 
 2. Explain the difference between a callback and a higher order function.
 
+A callback is function that receives another function as an argument and the new function will call it higher order function is a function that takes another function as an argument or arguments and return a function to who calls it.
 3. What is closure?
+
+ A closure gives you access to an outer scope from an inner function. In other words it allows the parent to give its child properties but the child cant give its parent any.
 
 4. Describe the four rules of the 'this' keyword.
 
+1) Window Binding has 2 variations in strict mode this will return undefined every time and in non strict mode it will return the window/ everything in the global object.(bad practice)
+
+2) In implicit binding this key word will point to the object  of the called function. You can tell by looking to the left of the period when the function is called.
+
+3). Explicit binding allows us to set this. to point/refernece a certain value with apply,call and bind or we can call a function with a specific value for this using apply and call.
+
+4) new Binding allows us to use the new keyword to create a new object and the this keyword will point to /reference it.
+  
 5. Why do we need super() in an extended class?
+
+We need super because it is allowing access and call functions on an objects parent just like object.create and parent.call does for us in protoyping.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
