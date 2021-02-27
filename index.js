@@ -79,8 +79,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(){
+  function lowerCaseNames(zoo){
+    return zoo.map((items)=>{ 
+      return items.animal_name.toLowerCase();
 
+    },[])
+    
   }
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
