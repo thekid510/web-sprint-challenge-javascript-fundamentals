@@ -63,13 +63,13 @@ const zooAnimals = [
   */
  
   function animalNames(array,x,y){
-   const names = array.forEach(function(item){
-      if(item[x] === '' && item[y] === ''){
+   const newArray = [];
+    array.forEach(function(item){
        newArray.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
-      }
+      
     
     });
-    return names;
+    return newArray;
   }
   console.log(animalNames(zooAnimals,'animal_name','scientific_name'));
 
@@ -129,10 +129,16 @@ const zooAnimals = [
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(val, val2){
+function add(a, b){
+  function callback(){
+    return a + b;
+    
+    
 
-
-}
+  }
+  return callback();
+  }
+console.log(add(5,2));
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
@@ -197,7 +203,7 @@ CuboidMaker.prototype.volume = function(){
   2 * (length * width + length * height + width * height)  */
   CuboidMaker.prototype.surfaceArea = function(){
 
-
+    return 2 *(this.length * this.width * this.height);
 
 
   }
@@ -222,9 +228,23 @@ CuboidMaker.prototype.volume = function(){
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-// constructor(attributes)
+ constructor(attributes){
+   this.length = attributes.length;
+   this.width = attributes.width;
+   this.height = attributes.height;
+ }// constructor  end 
+
+volume(){
 
 }
+surfaceArea(){
+
+}
+
+}
+
+
+
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
